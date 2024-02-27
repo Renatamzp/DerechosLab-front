@@ -1,0 +1,53 @@
+/* Estilos para la barra de navegación */
+nav {
+  background-color: #333;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+li:nth-child(2) {
+  margin-right: 20px;
+}
+
+li:nth-child(3) {
+  margin-left: auto;
+}
+
+/* Estilos para pantallas más pequeñas (móviles, tabletas, etc.) */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  li:nth-child(3) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

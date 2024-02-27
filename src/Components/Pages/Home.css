@@ -1,0 +1,22 @@
+/* Estilos para el contenedor del botón */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos para el botón */
+button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+/* Cambiar estilos al pasar el ratón sobre el botón */
+button:hover {
+  background-color: #2980b9;
+}
