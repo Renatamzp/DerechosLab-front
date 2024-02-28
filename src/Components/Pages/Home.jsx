@@ -6,9 +6,23 @@ const Home = () => {
   return (
     <div>
       <h1>Bienvenido a DerechosLab</h1>
-      <p>
-        Conoce tus derechos. Empodérate. Enfrenta el mundo laboral ¡CON TODO!
+      <p className="Eslogan">
+        Conoce tus derechos. <br />
+        Empodérate.
+        <br />
+        Enfrenta el mundo laboral <br />
+        ¡CON TODO!
+        <br />
       </p>
+      <div className="images-container">
+        <div className="img1">
+          <img src="src\assets\img\dvd.png" alt="otraimagen" />
+        </div>
+
+        <div className="img2">
+          <img src="src\assets\img\trabajando.png" alt="imgportada" />
+        </div>
+      </div>
 
       <div className="button-container">
         <Link to="/Quiz">
