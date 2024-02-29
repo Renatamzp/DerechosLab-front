@@ -3,35 +3,39 @@ import "./Preguntasherudito.css";
 import axios from "axios";
 
 function Preguntasherudito() {
-  const [data, setData] = useState([]); // Agregado el estado 'data'
+  const [data, setData] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   useEffect(() => {
-    // Llamada a la API para obtener todas las preguntas
     axios
       .get("http://localhost:8080/question/all-questions")
       .then((response) => {
-        // Actualizar el estado con los datos de la respuesta
         setData(response.data);
       })
       .catch((error) => {
         console.error("Error al obtener las preguntas:", error);
       });
-  }, []); // El segundo argumento del useEffect, un array vacío, asegura que la llamada se realice solo una vez al montar el componente
+  }, []);
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < data.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
 
   return (
     <div className="container-perfil">
-      {" "}
-      {/* Corregido el nombre de la clase */}
       <h4>Preguntas de Herudito</h4>
-      {data.map((item) => (
-        <div key={item.id} className="card">
-          <div>
-            <p>Pregunta: {item.questionText}</p>
-          </div>
+      {data.length > 0 && (
+        <div>
+          <p>Pregunta: {data[currentQuestionIndex].questionText}</p>
+          {currentQuestionIndex < data.length - 1 && (
+            <button onClick={handleNextQuestion}>Siguiente</button>
+          )}
         </div>
-      ))}
+      )}
     </div>
-  ); // Agregado el cierre del bloque return
+  );
 }
 
 export default Preguntasherudito;
