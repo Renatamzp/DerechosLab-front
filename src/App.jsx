@@ -7,7 +7,7 @@ import Home from "./Components/Pages/Home";
 import Register from "./Components/Pages/Register";
 import LoginCard from "./Components/Cards/LoginCard";
 import Quiz from "./Components/Pages/Quiz";
-import HeruditoCard from "./Components/Cards/HeruditoCard";
+import EruditoCard from "./Components/Cards/EruditoCard";
 import Preguntasherudito from "./Components/Pages/Preguntasherudito";
 import "./App.css";
 import { useState } from "react";
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/herudito" element={<HeruditoCard />} />
+          <Route path="/herudito" element={<EruditoCard />} />
           <Route
             path="/preguntasherudito"
             element={<Preguntasherudito />}

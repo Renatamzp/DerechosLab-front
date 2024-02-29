@@ -1,7 +1,10 @@
 /* Estilos para el cuerpo del documento HTML */
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom: 100px;
   font-family: "Bebas Neue", sans-serif; /* Puedes cambiar la fuente según tus preferencias */
   background-color: #f0f0f0; /* Color de fondo para el cuerpo */
 }
@@ -9,7 +12,7 @@ body {
 /* Estilos para el contenedor principal */
 #root {
   width: 100%;
-  max-width: 1400px; /* Ancho máximo del contenedor principal, ajusta según tus necesidades */
+  max-width: 1600px; /* Ancho máximo del contenedor principal, ajusta según tus necesidades */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   padding: 20px; /* Añade un relleno alrededor del contenido */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenedor */

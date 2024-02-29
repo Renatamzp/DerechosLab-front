@@ -1,29 +1,28 @@
-/* Estilos para el contenedor del botón */
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* Estilos para el botón */
 button {
-  font-size: 1.5em;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  background-color: #3498db;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2em;
+  padding: 15px 30px;
+  border-radius: 15px;
+  background-color: transparent;
   color: #fff;
   cursor: pointer;
-  border: none;
+  transition: all 0.3s ease;
 }
 
 /* Cambiar estilos al pasar el ratón sobre el botón */
 button:hover {
-  background-color: #2980b9;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
 /* Estilos para las imágenes */
 .images-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
 
 .img1,
@@ -40,11 +39,22 @@ button:hover {
 }
 
 .img2 {
-  margin-top: -250px;
+  position: relative;
+}
+
+.Saludo {
+  text-align: center;
+  margin: 0;
+}
+
+.button-container {
+  text-align: center;
 }
 
 .Eslogan {
   text-align: left;
   margin-top: 10px;
   font-size: 1.8em;
+  overflow: hidden; /* Asegura que el texto se oculte hasta que se complete la animación */
+  white-space: nowrap;
 }

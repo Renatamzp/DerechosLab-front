@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./HeruditoCard.css";
+import "../Cards/EruditoCard.css";
 
-const HeruditoCard = () => {
+const EruditoCard = () => {
   const navigate = useNavigate();
 
   const handleSelect = () => {
     console.log("¡Seleccionado!");
-    navigate("/preguntasherudito"); // Asegúrate de que esta ruta coincida con la configuración en tu enrutador
+    navigate("/preguntasherudito");
   };
 
   return (
@@ -15,11 +15,11 @@ const HeruditoCard = () => {
       <div className="shape">
         <div className="image"></div>
       </div>
-      <h3>Herudito Laboral</h3>
-      <h4 className="title">Pon a prueba tus conocimientos</h4>
+      <h2>Erudito Laboral</h2>
+      <h4 className="title">Conoce tus derechos laborales</h4>
       <button onClick={handleSelect}>Seleccionar</button>
     </div>
   );
 };
 
-export default HeruditoCard;
+export default EruditoCard;

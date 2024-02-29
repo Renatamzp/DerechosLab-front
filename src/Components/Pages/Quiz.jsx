@@ -1,14 +1,16 @@
 import React from "react";
-import HeruditoCard from "../Cards/HeruditoCard";
+import HeruditoCard from "../Cards/EruditoCard";
 import RapidoCard from "../Cards/RapidoCard";
+import "./Quiz.css";
 
 const Quiz = () => {
   return (
-    <div>
+    <div className="quiz-container">
       <h1> Elije la modalidad de juego</h1>
-
-      <HeruditoCard />
-      <RapidoCard />
+      <div className="cards-container">
+        <HeruditoCard className="quiz-card" />
+        <RapidoCard className="quiz-card" />
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <h1>Bienvenido a DerechosLab</h1>
+      <h1 className="Saludo">Bienvenido a DerechosLab</h1>
       <p className="Eslogan">
         Conoce tus derechos. <br />
         Empodérate.

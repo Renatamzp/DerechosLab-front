@@ -16,8 +16,8 @@ const RapidoCard = () => {
       <div className="shape">
         <div className="image"></div>
       </div>
-      <h3>Rápido y preceiso </h3>
-      <h4 className="title">Juego contra el tiempo </h4>
+      <h2>Rápido y preciso </h2>
+      <h4 className="title">Desafia tus conocimientos contra el tiempo </h4>
       <button onClick={handleSelect}>Seleccionar</button>
     </div>
   );
