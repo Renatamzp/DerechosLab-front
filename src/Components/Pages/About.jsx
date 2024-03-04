@@ -54,16 +54,16 @@ const About = () => {
           </p>
           <div class="linksAdolfo">
             <a
-              href="https://github.com/AdolfoHR"
+              href="https://github.com/Renatamzp"
               target="_blank"
-              rel="GitHub Adolfo"
+              rel="GitHub Renata"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/adolfohram%C3%ADrez/"
+              href="https://www.linkedin.com/in/renatazambrano"
               target="_blank"
-              rel="Linkedin Adolfo"
+              rel="Linkedin Renata"
             >
               <i class="fab fa-linkedin"></i>
             </a>
@@ -80,16 +80,16 @@ const About = () => {
           <p className="team-member-role">Desarrollador FullStack</p>
           <div class="linksAdolfo">
             <a
-              href="https://github.com/AdolfoHR"
+              href="https://github.com/nicobritob"
               target="_blank"
-              rel="GitHub Adolfo"
+              rel="GitHub Nicolas"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/adolfohram%C3%ADrez/"
+              href="https://www.linkedin.com/in/nicolasbritob/"
               target="_blank"
-              rel="Linkedin Adolfo"
+              rel="Linkedin Nicolas"
             >
               <i class="fab fa-linkedin"></i>
             </a>
