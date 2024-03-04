@@ -11,7 +11,7 @@ const NavBar = ({ setUser }) => {
       <nav>
         <ul>
           <li className="nav-li logo-container">
-            <Link to="/home">
+            <Link to="/">
               <img src="src\assets\img\logoB.png" alt="Logo" className="logo" />
             </Link>
           </li>

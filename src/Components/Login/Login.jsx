@@ -1,8 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login({ setUser }) {
+  const navigate = useNavigate();
+
   // Estado local para gestionar la ruta, nombre de usuario, contraseña, etc.
   const [ruta, setRute] = useState("login");
   const [username, setUsername] = useState("");
@@ -27,6 +30,7 @@ function Login({ setUser }) {
         setUser(resp.data);
         localStorage.setItem("user", JSON.stringify(resp.data));
         console.log("Usuario guardado en localStorage");
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
@@ -53,6 +57,7 @@ function Login({ setUser }) {
         setUser(resp.data);
         localStorage.setItem("user", JSON.stringify(resp.data));
         console.log("Usuario nuevo guardado en localStorage");
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
