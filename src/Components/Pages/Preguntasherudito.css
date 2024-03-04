@@ -1,6 +1,5 @@
 .container-perfil {
-  /* Editamos directamente la clase container escrita en Quiz.jsx */
-  width: 640px;
+  width: 700px;
   margin: auto;
   margin-top: 150px;
   background: white;
@@ -10,57 +9,56 @@
   gap: 20px;
   border-radius: 10px;
   padding: 40px 50px;
-}
-
-.container-perfil hr {
-  /* Editamos el hr de la clase container */
-  height: 2px;
-  border: none;
-  background: #707070;
+  text-align: center; /* Centra el contenido horizontalmente */
 }
 
 .container-perfil h2 {
-  /* Editamos la letra h2 de la clase container */
   font-size: 27px;
   font-weight: 500;
 }
 
-.container-perfil ul li {
-  /* Editamos la lista ul li de container creando bordes */
+.container-perfil div {
   display: flex;
-  align-items: center;
-  height: 70px;
-  padding-left: 15px;
-  border: 1px solid #686868;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px;
+}
+
+.pregunta {
+  font-family: Poppins;
+}
+
+.container-perfil button.alternative-button {
+  font-family: "Poppins", sans-serif;
+  flex: 1;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
   font-size: 20px;
   cursor: pointer;
 }
 
+.container-perfil button.correct-option {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 20px;
+}
+
+.container-perfil .siguiente {
+  margin-top: 20px;
+  align-self: center; /* Centra el botón "Siguiente" horizontalmente */
+}
+
 .container-perfil button {
-  /* Editamos el boton de siguiente */
-  margin: auto;
-  width: 250px;
-  height: 65px;
-  background: #553f9d;
-  color: #fff;
-  font-size: 25px;
-  font-weight: 500;
-  border-radius: 8px;
+  height: 45px;
   cursor: pointer;
-}
-.container-perfil .index {
-  margin: auto;
-  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-.container-perfil .correct {
-  background: #dffff2;
-  border-color: #00d397;
-}
-
-.container-perfil .wrong {
-  background-color: #ffebeb;
-  border-color: #ff4a4a;
+.container-perfil button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
