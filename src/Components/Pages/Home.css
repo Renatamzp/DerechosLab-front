@@ -1,20 +1,24 @@
 /* Estilos para el botón */
-button {
-  font-family: "Luckiest Guy", cursive;
+
+.button-jugar {
+  font-family: "Boogaloo", cursive;
   font-size: 2em;
   padding: 15px 30px;
   border-radius: 15px;
-  background-color: transparent;
+  background-color: #3498db; /* Azul brillante */
   color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 /* Cambiar estilos al pasar el ratón sobre el botón */
-button:hover {
+.button-jugar:hover {
+  background-color: #297fb8; /* Azul más oscuro al pasar el ratón */
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Estilos para las imágenes */
@@ -22,7 +26,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 20px;
 }
 
 .img1,
@@ -42,19 +46,48 @@ button:hover {
   position: relative;
 }
 
+/* Estilos para el Saludo en Home */
 .Saludo {
   text-align: center;
-  margin: 0;
+  margin: 50px 0; /* Ajusta el margen según sea necesario */
+  font-size: 2.5em; /* Tamaño del texto */
+  color: #3498db; /* Color del texto, puedes cambiarlo según tu paleta de colores */
+  font-family: "Montserrat", sans-serif; /* Tipo de fuente, puedes cambiarlo según tus preferencias */
 }
 
-.button-container {
-  text-align: center;
-}
-
+/* Estilos para el Eslogan en Home */
 .Eslogan {
-  text-align: left;
+  text-align: center; /* Centro horizontalmente el Slogan */
   margin-top: 10px;
   font-size: 1.8em;
-  overflow: hidden; /* Asegura que el texto se oculte hasta que se complete la animación */
+  overflow: hidden;
   white-space: nowrap;
+  letter-spacing: 2px; /* Agrega espacio entre letras según sea necesario */
+}
+
+/* Añade un margen superior al Slogan */
+.Eslogan:first-line {
+  margin-top: 20px;
+}
+
+.char-animation {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeInOut 4s linear infinite; /* Ajusta la duración a tu preferencia */
+}
+
+.char-space {
+  width: 0.8em; /* Ajusta el ancho del espacio según sea necesario */
+  display: inline-block;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
 }

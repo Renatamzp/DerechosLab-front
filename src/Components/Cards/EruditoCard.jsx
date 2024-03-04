@@ -11,13 +11,14 @@ const EruditoCard = () => {
   };
 
   return (
-    <div className="container">
-      <div className="shape">
-        <div className="image"></div>
-      </div>
-      <h2>Erudito Laboral</h2>
-      <h4 className="title">Conoce tus derechos laborales</h4>
-      <button onClick={handleSelect}>Seleccionar</button>
+    <div className="containerErudito">
+      <h2 className="tituloErudito">Erudito Laboral</h2>
+      <h4 className="textoErudito">
+        Conoce y aprende sobre tus derechos laborales
+      </h4>
+      <button className="EruditoBtn" onClick={handleSelect}>
+        Seleccionar
+      </button>
     </div>
   );
 };

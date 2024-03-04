@@ -1,21 +1,27 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ setUser }) => {
+  const cerrarSesion = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
   return (
     <div className="navbar-container">
       <nav>
         <ul>
-          <li className="logo-container">
-            <Link to="/">
-              <img src="src\assets\img\Logo.png" alt="Logo" className="logo" />
+          <li className="nav-li logo-container">
+            <Link to="/home">
+              <img src="src\assets\img\logoB.png" alt="Logo" className="logo" />
             </Link>
           </li>
-          <li className="About">
+          <li className="nav-li About">
             <Link to="/about">Acerca de</Link>
           </li>
-          <li className="Register">
-            <Link to="/register">Registrarse</Link>
+          <li className="nav-li cerrarSesion">
+            <a role="button" onClick={() => cerrarSesion()}>
+              Cerrar Sesión{" "}
+            </a>
           </li>
         </ul>
       </nav>

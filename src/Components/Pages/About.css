@@ -1,0 +1,86 @@
+/* Estilos para la interfaz About */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-title {
+  font-size: 2em;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.about-subtitle {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Estilos para las tarjetas del equipo */
+.team-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member-name {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-member-role {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.linksAdolfo {
+  position: absolute;
+  bottom: 5;
+  left: 25%; /* Centramos horizontalmente en relación con el padre */
+  z-index: 90;
+  display: flex;
+  gap: 20px;
+  transition: 0.5s;
+}
+
+.linksAdolfo a {
+  font-size: 24px;
+  color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.linksAdolfo a:hover {
+  background-color: #3498db;
+  color: #fff;
+}

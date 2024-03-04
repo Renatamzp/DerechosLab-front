@@ -48,7 +48,19 @@
 
 .container-perfil .siguiente {
   margin-top: 20px;
+  font-family: "Boogaloo", cursive;
   align-self: center; /* Centra el botón "Siguiente" horizontalmente */
+  background-color: #3498db; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Elimina el borde */
+  padding: 10px 20px; /* Ajusta el relleno */
+  border-radius: 5px; /* Añade bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  font-size: 25px; /* Tamaño del texto */
+  transition: background-color 0.3s; /* Agrega una transición de color de fondo */
+}
+.container-perfil .siguiente:hover {
+  background-color: #1c7cd6; /* Cambia el color de fondo al pasar el ratón */
 }
 
 .container-perfil button {

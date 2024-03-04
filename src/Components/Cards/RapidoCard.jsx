@@ -11,14 +11,14 @@ const RapidoCard = () => {
   };
 
   return (
-    <div className="container">
-      {" "}
-      <div className="shape">
-        <div className="image"></div>
-      </div>
-      <h2>Rápido y preciso </h2>
-      <h4 className="title">Desafia tus conocimientos contra el tiempo </h4>
-      <button onClick={handleSelect}>Seleccionar</button>
+    <div className="RapidoContainer">
+      <h2 className="tituloRapido">Rápido y preciso </h2>
+      <h4 className="textoRapido">
+        Desafia tus conocimientos contra el tiempo{" "}
+      </h4>
+      <button className="RapidoBtn" onClick={handleSelect}>
+        Proximamente
+      </button>
     </div>
   );
 };

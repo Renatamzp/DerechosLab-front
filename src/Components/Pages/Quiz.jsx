@@ -6,7 +6,7 @@ import "./Quiz.css";
 const Quiz = () => {
   return (
     <div className="quiz-container">
-      <h1> Elije la modalidad de juego</h1>
+      <h1> Elige la modalidad de juego</h1>
       <div className="cards-container">
         <HeruditoCard className="quiz-card" />
         <RapidoCard className="quiz-card" />

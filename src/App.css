@@ -4,7 +4,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #b8e2f0, #ffffff);
+  background: var(--bg);
+
   /* Otros estilos */
 }
 
