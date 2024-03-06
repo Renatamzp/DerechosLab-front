@@ -83,7 +83,7 @@ function Login({ setUser }) {
             /* Campos del formulario para inicio de sesión */
             <>
               <div className="pregunta">
-                <label htmlFor="texto">Correo Electrónico</label>
+                <label htmlFor="texto">Nombre</label>
                 <input
                   type="text"
                   name="texto"
@@ -168,7 +168,7 @@ function Login({ setUser }) {
           {ruta === "login" ? (
             <button
               className="creaCuentaBtn"
-              onClick={() => setRute("crear cuenta")}
+              onClick={() => setRute("registro")} // Corregido a "registro"
             >
               Crea tu cuenta
             </button>

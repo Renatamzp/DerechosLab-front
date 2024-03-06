@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Abouts from "./Components/Pages/About";
 import Home from "./Components/Pages/Home";
-import Inicio from "./Components/Pages/Inicio";
 import Quiz from "./Components/Pages/Quiz";
 import EruditoCard from "./Components/Cards/EruditoCard";
 import Preguntasherudito from "./Components/Pages/Preguntasherudito";
