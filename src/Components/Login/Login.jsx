@@ -54,10 +54,11 @@ function Login({ setUser }) {
         apellidoUsuario: apellidoUsuario,
       })
       .then((resp) => {
-        setUser(resp.data);
-        localStorage.setItem("user", JSON.stringify(resp.data));
-        console.log("Usuario nuevo guardado en localStorage");
-        navigate("/");
+        //setUser(resp.data);
+        //localStorage.setItem("user", JSON.stringify(resp.data));
+        //console.log("Usuario nuevo guardado en localStorage");
+        //navigate("/");
+        setRute("login");
       })
       .catch((error) => console.log(error));
   };

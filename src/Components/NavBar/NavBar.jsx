@@ -21,6 +21,9 @@ const NavBar = ({ setUser }) => {
           <li className="nav-li About">
             <Link to="/perfilUsuario">Mi Perfil</Link>
           </li>
+          <li className="nav-li About">
+            <Link to="/avatar">Avatar</Link>
+          </li>
           <li className="nav-li cerrarSesion">
             <a role="button" onClick={() => cerrarSesion()}>
               Cerrar Sesión{" "}

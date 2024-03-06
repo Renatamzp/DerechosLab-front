@@ -11,6 +11,7 @@ import Login from "./Components/Login/Login";
 import axios from "axios";
 import "./App.css";
 import PerfilUsuario from "./Components/Pages/PerfilUsuario";
+import Avatar from "./Components/Pages/Avatar";
 
 const App = () => {
   const [user, setUser] = React.useState(null);
@@ -25,8 +26,8 @@ const App = () => {
 
   // Función para manejar el inicio de sesión y actualización del usuario
   const handleLogin = (userData) => {
-    setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
+    setUser(userData);
   };
 
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Abouts />} />
+          <Route path="/avatar" element={<Avatar />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/herudito" element={<EruditoCard />} />
           <Route path="/preguntasherudito" element={<Preguntasherudito />} />

@@ -15,6 +15,35 @@
   color: #fff;
 }
 
+.container-perfil {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+}
+
+.avatar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-avatar {
+  margin: auto;
+  display: flex;
+  text-decoration: none;
+  padding: 5px; /* Aumento del padding para hacer más grande el botón */
+  border-radius: 5px;
+  font-family: "Boogaloo", cursive;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  font-size: 20px; /* Aumento del tamaño de fuente */
+  border: 1px solid #007bff;
+}
+
 .datos-usuario {
   margin-top: 20px;
 }
@@ -60,4 +89,8 @@
 
 .datos-usuario p span.valor {
   width: auto; /* Restauramos el ancho automático para el valor */
+}
+
+.avatar-image {
+  display: flex;
 }

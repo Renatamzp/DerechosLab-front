@@ -1,6 +1,11 @@
 :root {
   --bg: linear-gradient(to bottom, #b8e2f0, #ffffff);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Estilos para el cuerpo del documento HTML */
 body {
