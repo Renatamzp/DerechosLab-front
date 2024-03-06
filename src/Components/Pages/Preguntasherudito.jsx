@@ -14,6 +14,8 @@ function Preguntasherudito() {
     useState([]);
   const [timeRemaining, setTimeRemaining] = useState(15);
   const [timerActive, setTimerActive] = useState(true);
+  const [answeredQuestions, setAnsweredQuestions] = useState(0);
+  const [showResults, setShowResults] = useState(false); // Estado para controlar la visualización de los resultados
 
   useEffect(() => {
     axios
@@ -33,12 +35,10 @@ function Preguntasherudito() {
       if (timeRemaining > 0 && timerActive) {
         setTimeRemaining((prev) => prev - 1);
       } else {
-        // Si el tiempo se agota, avanza a la siguiente pregunta
         handleNextQuestion();
       }
     }, 1000);
 
-    // Limpiar el intervalo cuando el componente se desmonta o cambia la pregunta
     return () => clearInterval(timerInterval);
   }, [timeRemaining, timerActive, currentQuestionIndex]);
 
@@ -50,33 +50,21 @@ function Preguntasherudito() {
   const handleNextQuestion = () => {
     if (currentQuestionIndex < data.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOption(null); // Reiniciar la selección al avanzar a la siguiente pregunta
+      setSelectedOption(null);
       resetTimer();
+      setAnsweredQuestions(answeredQuestions + 1);
+    } else {
+      setShowResults(true); // Mostrar resultados cuando se ha respondido la última pregunta
     }
   };
 
   const handleOptionClick = (choice) => {
-    console.log("Opción seleccionada:", choice);
     setSelectedOption(choice);
-    setTimerActive(false); // Detener el cronómetro al seleccionar una opción
-  };
+    setTimerActive(false);
 
-  const shuffleOptions = (question) => {
-    const allOptions = [
-      ...JSON.parse(question.choices[0].choicesText),
-      question.correctChoices.correctChoicesText,
-    ];
-
-    // Lógica para barajar todas las opciones
-    const shuffled = allOptions.sort(() => Math.random() - 0.5);
-    setShuffledOptions(shuffled);
-  };
-
-  const handleAnswerSubmit = () => {
-    // Verificar si la opción seleccionada es correcta
+    // Contabilizar la respuesta
     if (
-      selectedOption ===
-      data[currentQuestionIndex].correctChoices.correctChoicesText
+      choice === data[currentQuestionIndex].correctChoices.correctChoicesText
     ) {
       setCorrectAnswers(correctAnswers + 1);
       setTotalPoints(totalPoints + 10);
@@ -89,18 +77,29 @@ function Preguntasherudito() {
       setTotalPoints(totalPoints - 5);
     }
 
-    // Avanzar a la siguiente pregunta
-    handleNextQuestion();
+    // Avanzar a la siguiente pregunta después de un breve retraso
+    setTimeout(() => {
+      handleNextQuestion();
+    }, 1000);
+  };
+
+  const shuffleOptions = (question) => {
+    const allOptions = [
+      ...JSON.parse(question.choices[0].choicesText),
+      question.correctChoices.correctChoicesText,
+    ];
+    const shuffled = allOptions.sort(() => Math.random() - 0.5);
+    setShuffledOptions(shuffled);
   };
 
   const reviewIncorrectAnswers = () => {
     setCurrentQuestionIndex(incorrectlyAnsweredQuestions[0]);
-    setIncorrectlyAnsweredQuestions([]); // Limpiar la lista de preguntas incorrectas
+    setIncorrectlyAnsweredQuestions([]);
   };
 
   return (
     <div className="container-perfil">
-      {data.length > 0 && (
+      {!showResults && data.length > 0 && answeredQuestions < 15 && (
         <div>
           <span>
             Pregunta {currentQuestionIndex + 1} de {data.length}:
@@ -122,6 +121,7 @@ function Preguntasherudito() {
                     : ""
                 }`}
                 onClick={() => handleOptionClick(choice)}
+                disabled={selectedOption != null}
               >
                 {choice}
               </button>
@@ -130,26 +130,21 @@ function Preguntasherudito() {
           <div>
             <p>Tiempo restante: {timeRemaining}s</p>
           </div>
-          {currentQuestionIndex < data.length - 1 && (
-            <button
-              onClick={handleAnswerSubmit}
-              className={`siguiente ${selectedOption ? "" : "disabled"}`}
-            >
-              Siguiente
+        </div>
+      )}
+      {answeredQuestions === 15 && !showResults && (
+        <button onClick={() => setShowResults(true)}>Mostrar Resultados</button>
+      )}
+      {showResults && (
+        <div>
+          <h3>Resultados:</h3>
+          <p>Preguntas Correctas: {correctAnswers}</p>
+          <p>Preguntas Incorrectas: {incorrectAnswers}</p>
+          <p>Puntos Totales: {totalPoints}</p>
+          {incorrectAnswers > 0 && (
+            <button onClick={reviewIncorrectAnswers}>
+              Revisar Preguntas Incorrectas
             </button>
-          )}
-          {currentQuestionIndex === data.length - 1 && (
-            <div>
-              <h3>Resultados:</h3>
-              <p>Preguntas Correctas: {correctAnswers}</p>
-              <p>Preguntas Incorrectas: {incorrectAnswers}</p>
-              <p>Puntos Totales: {totalPoints}</p>
-              {incorrectAnswers > 0 && (
-                <button onClick={reviewIncorrectAnswers}>
-                  Revisar Preguntas Incorrectas
-                </button>
-              )}
-            </div>
           )}
         </div>
       )}

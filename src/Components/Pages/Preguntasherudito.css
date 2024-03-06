@@ -1,3 +1,14 @@
+.container-perfil button.correct {
+  background-color: lightblue; /* Celeste para la opción correcta */
+  color: #000;
+  border: 2px solid #000;
+}
+
+.container-perfil button.incorrect {
+  background-color: red; /* Rojo para la opción incorrecta */
+  color: #fff; /* Texto blanco para mejor contraste */
+}
+
 .container-perfil {
   width: 700px;
   margin: auto;
@@ -9,7 +20,7 @@
   gap: 20px;
   border-radius: 10px;
   padding: 40px 50px;
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center;
 }
 
 .container-perfil h2 {
@@ -20,7 +31,7 @@
 .container-perfil div {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los botones horizontalmente */
+  align-items: center;
   gap: 10px;
 }
 
@@ -38,29 +49,22 @@
   cursor: pointer;
 }
 
-.container-perfil button.correct-option {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  font-size: 20px;
-}
-
 .container-perfil .siguiente {
   margin-top: 20px;
   font-family: "Boogaloo", cursive;
-  align-self: center; /* Centra el botón "Siguiente" horizontalmente */
-  background-color: #3498db; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Elimina el borde */
-  padding: 10px 20px; /* Ajusta el relleno */
-  border-radius: 5px; /* Añade bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar el ratón */
-  font-size: 25px; /* Tamaño del texto */
-  transition: background-color 0.3s; /* Agrega una transición de color de fondo */
+  align-self: center;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s;
 }
+
 .container-perfil .siguiente:hover {
-  background-color: #1c7cd6; /* Cambia el color de fondo al pasar el ratón */
+  background-color: #1c7cd6;
 }
 
 .container-perfil button {
@@ -73,4 +77,14 @@
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.2);
+}
+.container-perfil button.correct {
+  background-color: green; /* Celeste para la opción correcta */
+  color: #000;
+  border: 2px solid #000;
+}
+
+.container-perfil button.incorrect {
+  background-color: red; /* Rojo para la opción incorrecta */
+  color: #fff; /* Texto blanco para mejor contraste */
 }

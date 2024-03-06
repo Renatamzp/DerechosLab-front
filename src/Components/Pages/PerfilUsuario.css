@@ -1,0 +1,63 @@
+.titulo-perfil {
+  text-align: center;
+  font-size: 36px; /* Tamaño de fuente aumentado */
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.perfil {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.datos-usuario {
+  margin-top: 20px;
+}
+
+.datos-usuario p {
+  font-size: 20px; /* Tamaño de fuente aumentado */
+  margin-bottom: 10px;
+}
+
+.datos-usuario p span {
+  font-weight: bold;
+}
+
+.boton-regresar {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 16px 24px; /* Aumento del padding para hacer más grande el botón */
+  border-radius: 5px;
+  font-family: "Boogaloo", cursive;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin: 20px auto 0;
+  font-size: 30px; /* Aumento del tamaño de fuente */
+}
+
+.boton-regresar:hover {
+  background-color: #297fb8;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.datos-usuario p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.datos-usuario p span {
+  display: inline-block; /* Convertimos el span en un bloque en línea */
+  width: 100px; /* Ancho fijo para alinear los span */
+  font-weight: bold;
+}
+
+.datos-usuario p span.valor {
+  width: auto; /* Restauramos el ancho automático para el valor */
+}

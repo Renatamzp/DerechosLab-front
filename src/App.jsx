@@ -11,6 +11,7 @@ import RapidoCard from "./Components/Cards/RapidoCard";
 import Login from "./Components/Login/Login";
 import axios from "axios";
 import "./App.css";
+import PerfilUsuario from "./Components/Pages/PerfilUsuario";
 
 const App = () => {
   const [user, setUser] = React.useState(null);
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/herudito" element={<EruditoCard />} />
           <Route path="/preguntasherudito" element={<Preguntasherudito />} />
           <Route path="/rapido" element={<RapidoCard />} />
+          <Route path="/perfilUsuario" element={<PerfilUsuario />} />
         </Routes>
         {!user && <Login setUser={handleLogin} />}
       </div>
