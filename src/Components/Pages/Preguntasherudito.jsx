@@ -10,12 +10,10 @@ function Preguntasherudito() {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [incorrectAnswers, setIncorrectAnswers] = useState(0);
   const [totalPoints, setTotalPoints] = useState(0);
-  const [incorrectlyAnsweredQuestions, setIncorrectlyAnsweredQuestions] =
-    useState([]);
   const [timeRemaining, setTimeRemaining] = useState(15);
   const [timerActive, setTimerActive] = useState(true);
   const [answeredQuestions, setAnsweredQuestions] = useState(0);
-  const [showResults, setShowResults] = useState(false); // Estado para controlar la visualización de los resultados
+  const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
     axios
@@ -54,7 +52,7 @@ function Preguntasherudito() {
       resetTimer();
       setAnsweredQuestions(answeredQuestions + 1);
     } else {
-      setShowResults(true); // Mostrar resultados cuando se ha respondido la última pregunta
+      setShowResults(true);
     }
   };
 
@@ -62,7 +60,6 @@ function Preguntasherudito() {
     setSelectedOption(choice);
     setTimerActive(false);
 
-    // Contabilizar la respuesta
     if (
       choice === data[currentQuestionIndex].correctChoices.correctChoicesText
     ) {
@@ -70,14 +67,9 @@ function Preguntasherudito() {
       setTotalPoints(totalPoints + 10);
     } else {
       setIncorrectAnswers(incorrectAnswers + 1);
-      setIncorrectlyAnsweredQuestions((prev) => [
-        ...prev,
-        currentQuestionIndex,
-      ]);
       setTotalPoints(totalPoints - 5);
     }
 
-    // Avanzar a la siguiente pregunta después de un breve retraso
     setTimeout(() => {
       handleNextQuestion();
     }, 1000);
@@ -90,11 +82,6 @@ function Preguntasherudito() {
     ];
     const shuffled = allOptions.sort(() => Math.random() - 0.5);
     setShuffledOptions(shuffled);
-  };
-
-  const reviewIncorrectAnswers = () => {
-    setCurrentQuestionIndex(incorrectlyAnsweredQuestions[0]);
-    setIncorrectlyAnsweredQuestions([]);
   };
 
   return (
@@ -141,11 +128,13 @@ function Preguntasherudito() {
           <p>Preguntas Correctas: {correctAnswers}</p>
           <p>Preguntas Incorrectas: {incorrectAnswers}</p>
           <p>Puntos Totales: {totalPoints}</p>
-          {incorrectAnswers > 0 && (
-            <button onClick={reviewIncorrectAnswers}>
-              Revisar Preguntas Incorrectas
-            </button>
-          )}
+          <div className="image-container">
+            <img
+              className="imgresults"
+              src="src/assets/img/pulgar-arriba.png"
+              alt="Resultado de la pregunta"
+            />
+          </div>
         </div>
       )}
     </div>

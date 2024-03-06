@@ -88,3 +88,7 @@
   background-color: red; /* Rojo para la opción incorrecta */
   color: #fff; /* Texto blanco para mejor contraste */
 }
+.imgresults {
+  width: 150px; /* Ancho mediano */
+  height: auto; /* Altura automática para mantener la proporción */
+}

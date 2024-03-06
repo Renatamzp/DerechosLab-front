@@ -8,8 +8,22 @@ const Quiz = () => {
     <div className="quiz-container">
       <h1> Elige la modalidad de juego</h1>
       <div className="cards-container">
-        <HeruditoCard className="quiz-card" />
-        <RapidoCard className="quiz-card" />
+        <div className="card-with-image">
+          <img
+            src="src\assets\img\trabajador.png"
+            alt="IMG1"
+            className="card-image1"
+          />
+          <HeruditoCard className="quiz-card" />
+        </div>
+        <div className="card-with-image">
+          <RapidoCard className="quiz-card" />
+          <img
+            src="src/assets/img/paracaidas.png"
+            alt="IMG2"
+            className="card-image2"
+          />
+        </div>
       </div>
     </div>
   );

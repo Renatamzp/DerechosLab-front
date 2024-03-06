@@ -13,5 +13,23 @@
 
 /* Estilos para cada tarjeta */
 .quiz-card {
-  width: 100%; /* Ajusta el ancho según sea necesario */
+  width: 100%;
+}
+
+.card-with-image {
+  display: flex;
+  align-items: center;
+}
+
+.card-image1 {
+  width: 200px;
+  height: auto;
+  margin-right: 80px;
+}
+
+.card-image2 {
+  width: 300px;
+  height: auto;
+  margin-right: 20px; /* Espacio entre la imagen y la tarjeta */
+  margin-bottom: 40px;
 }
