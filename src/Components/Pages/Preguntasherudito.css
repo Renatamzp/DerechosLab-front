@@ -1,15 +1,15 @@
-.container-perfil button.correct {
+.container-preguntas button.correct {
   background-color: lightblue; /* Celeste para la opción correcta */
   color: #000;
   border: 2px solid #000;
 }
 
-.container-perfil button.incorrect {
+.container-preguntas button.incorrect {
   background-color: red; /* Rojo para la opción incorrecta */
   color: #fff; /* Texto blanco para mejor contraste */
 }
 
-.container-perfil {
+.container-preguntas {
   width: 700px;
   margin: auto;
   margin-top: 150px;
@@ -23,12 +23,12 @@
   text-align: center;
 }
 
-.container-perfil h2 {
+.container-preguntas h2 {
   font-size: 27px;
   font-weight: 500;
 }
 
-.container-perfil div {
+.container-preguntas div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@
   font-family: Poppins;
 }
 
-.container-perfil button.alternative-button {
+.container-preguntas button.alternative-button {
   font-family: "Poppins", sans-serif;
   flex: 1;
   background-color: #fff;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.container-perfil .siguiente {
+.container-preguntas .siguiente {
   margin-top: 20px;
   font-family: "Boogaloo", cursive;
   align-self: center;
@@ -63,28 +63,28 @@
   transition: background-color 0.3s;
 }
 
-.container-perfil .siguiente:hover {
+.container-preguntas .siguiente:hover {
   background-color: #1c7cd6;
 }
 
-.container-perfil button {
+.container-preguntas button {
   height: 45px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.container-perfil button:hover {
+.container-preguntas button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.2);
 }
-.container-perfil button.correct {
+.container-preguntas button.correct {
   background-color: green; /* Celeste para la opción correcta */
   color: #000;
   border: 2px solid #000;
 }
 
-.container-perfil button.incorrect {
+.container-preguntas button.incorrect {
   background-color: red; /* Rojo para la opción incorrecta */
   color: #fff; /* Texto blanco para mejor contraste */
 }

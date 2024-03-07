@@ -1,18 +1,19 @@
 .titulo-perfil {
   text-align: center;
-  font-size: 36px; /* Tamaño de fuente aumentado */
-  color: #fff;
+  font-size: 36px;
+  color: #eaeaea; /* Color más suave para el título */
   margin-bottom: 20px;
+  font-weight: 600; /* Hacer el texto un poco más grueso */
 }
 
 .perfil {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #2c3e50;
-  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  background-color: #34495e; /* Color de fondo más oscuro para el contraste */
+  color: #eaeaea; /* Color de texto más claro para mejor lectura */
 }
 
 .container-perfil {
@@ -34,63 +35,67 @@
   margin: auto;
   display: flex;
   text-decoration: none;
-  padding: 5px; /* Aumento del padding para hacer más grande el botón */
-  border-radius: 5px;
-  font-family: "Boogaloo", cursive;
+  padding: 10px;
+  border-radius: 8px; /* Bordes más redondeados */
+  font-family: "Arial", sans-serif; /* Cambio de tipografía */
   text-align: center;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-
-  font-size: 20px; /* Aumento del tamaño de fuente */
-  border: 1px solid #007bff;
+  transition: all 0.3s ease-in-out; /* Transición más suave */
+  color: #ffffff; /* Texto blanco para mayor contraste */
+  background-color: #3498db; /* Fondo azul más vibrante */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-.datos-usuario {
-  margin-top: 20px;
-}
-
-.datos-usuario p {
-  font-size: 20px; /* Tamaño de fuente aumentado */
-  margin-bottom: 10px;
-}
-
-.datos-usuario p span {
-  font-weight: bold;
+.boton-avatar:hover {
+  background-color: #2980b9; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
 }
 
 .boton-regresar {
   display: block;
   text-decoration: none;
   color: #fff;
-  background-color: #007bff;
-  padding: 16px 24px; /* Aumento del padding para hacer más grande el botón */
-  border-radius: 5px;
-  font-family: "Boogaloo", cursive;
+  background-color: #007bff; /* Color más llamativo */
+  padding: 16px 24px;
+  border-radius: 8px; /* Bordes más redondeados */
+  font-family: "Boogaloo", cursive; /* Cambio de tipografía */
   text-align: center;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  margin: 20px auto 0;
-  font-size: 30px; /* Aumento del tamaño de fuente */
+  transition: all 0.3s ease-in-out; /* Transición más suave */
+  margin: 10px auto 0;
+  font-size: 30px;
 }
 
 .boton-regresar:hover {
-  background-color: #297fb8;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.datos-usuario p {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.datos-usuario p span {
-  display: inline-block; /* Convertimos el span en un bloque en línea */
-  width: 100px; /* Ancho fijo para alinear los span */
-  font-weight: bold;
-}
-
-.datos-usuario p span.valor {
-  width: auto; /* Restauramos el ancho automático para el valor */
+  background-color: #297fb8; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
 }
 
 .avatar-image {
+  max-width: 100px; /* Limitar tamaño del avatar */
+  border-radius: 50%; /* Hacer el avatar redondo */
+  border: 2px solid #fff; /* Borde blanco para destacar el avatar */
+}
+.datos-usuario {
   display: flex;
+  flex-direction: column;
+}
+
+.datos-usuario p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.datos-usuario span {
+  margin-right: 5px;
+  font-weight: bold;
+  width: 100px; /* Ancho fijo para los títulos */
+}
+
+.valorapellido,
+.valoremail,
+.valorusuario {
+  font-weight: normal;
+  width: 200px; /* Ancho fijo para los valores */
 }

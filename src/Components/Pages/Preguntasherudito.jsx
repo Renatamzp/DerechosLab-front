@@ -85,7 +85,7 @@ function Preguntasherudito() {
   };
 
   return (
-    <div className="container-perfil">
+    <div className="container-preguntas">
       {!showResults && data.length > 0 && answeredQuestions < 15 && (
         <div>
           <span>

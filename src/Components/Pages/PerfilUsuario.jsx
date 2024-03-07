@@ -19,16 +19,16 @@ function PerfilUsuarioDetalle({ usuario }) {
       <div className="container-perfil">
         <div className="datos-usuario">
           <p>
-            <span>Apellido:</span>
-            <span class="valor">{apellidoUsuario}</span>
+            <span className="apellido-cont">Apellido:</span>
+            <span className="valorapellido">{apellidoUsuario}</span>
           </p>
           <p>
-            <span>Email:</span>
-            <span class="valor">{email}</span>
+            <span className="email-cont">Email:</span>
+            <span className="valoremail">{email}</span>
           </p>
           <p>
-            <span>Edad:</span>
-            <span class="valor">{aniosUsuario}</span>
+            <span className="edad-cont">Edad:</span>
+            <span className="valorusuario">{aniosUsuario}</span>
           </p>
         </div>
         <div className="avatar-content">
@@ -53,7 +53,7 @@ function PerfilUsuarioDetalle({ usuario }) {
       </div>
       <div></div>
       <Link to="/" className="boton-regresar">
-        Regresar
+        Ir a jugar
       </Link>
     </div>
   );

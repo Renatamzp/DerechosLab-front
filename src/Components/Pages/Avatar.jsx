@@ -38,7 +38,7 @@ const Avatar = () => {
 
   return (
     <div className="avatar-container">
-      <h1>Avatar</h1>
+      <h1 className="avatar-title">Selecciona tu avatar</h1>
       <div className="avatar-list">
         {avatarLinks.map((avatar, index) => (
           <img
