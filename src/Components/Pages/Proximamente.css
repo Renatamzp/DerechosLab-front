@@ -1,0 +1,7 @@
+.prox-container {
+  display: flex;
+  flex-direction: column; /* Alinear verticalmente */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  text-align: center; /* Alinear texto horizontalmente */
+}

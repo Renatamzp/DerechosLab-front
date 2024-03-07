@@ -7,7 +7,7 @@ const RapidoCard = () => {
 
   const handleSelect = () => {
     console.log("¡Seleccionado!");
-    navigate("/otra-ruta");
+    navigate("/proximamente");
   };
 
   return (

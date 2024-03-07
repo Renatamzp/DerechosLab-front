@@ -12,6 +12,7 @@ import axios from "axios";
 import "./App.css";
 import PerfilUsuario from "./Components/Pages/PerfilUsuario";
 import Avatar from "./Components/Pages/Avatar";
+import Proximamente from "./Components/Pages/Proximamente";
 
 const App = () => {
   const [user, setUser] = React.useState(null);
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/herudito" element={<EruditoCard />} />
           <Route path="/preguntasherudito" element={<Preguntasherudito />} />
           <Route path="/rapido" element={<RapidoCard />} />
+          <Route path="/proximamente" element={<Proximamente />} />
           <Route path="/perfilUsuario" element={<PerfilUsuario />} />
         </Routes>
         {!user && <Login setUser={handleLogin} />}
