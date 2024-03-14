@@ -17,7 +17,7 @@ const EruditoCard = () => {
         Conoce y aprende sobre tus derechos laborales
       </h4>
       <button className="EruditoBtn" onClick={handleSelect}>
-        Seleccionar
+        Iniciar Quiz
       </button>
     </div>
   );
