@@ -49,20 +49,20 @@
 /* Estilos para el Saludo en Home */
 .Saludo {
   text-align: center;
-  margin: 50px 0; /* Ajusta el margen según sea necesario */
-  font-size: 2.5em; /* Tamaño del texto */
-  color: #3498db; /* Color del texto, puedes cambiarlo según tu paleta de colores */
-  font-family: "Montserrat", sans-serif; /* Tipo de fuente, puedes cambiarlo según tus preferencias */
+  margin: 50px 0;
+  font-size: 2.5em;
+  color: #3498db;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Estilos para el Eslogan en Home */
 .Eslogan {
-  text-align: center; /* Centro horizontalmente el Slogan */
+  text-align: center;
   margin-top: 10px;
   font-size: 1.8em;
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: 2px; /* Agrega espacio entre letras según sea necesario */
+  letter-spacing: 2px;
 }
 
 /* Añade un margen superior al Slogan */
@@ -73,11 +73,11 @@
 .char-animation {
   opacity: 0;
   display: inline-block;
-  animation: fadeInOut 4s linear infinite; /* Ajusta la duración a tu preferencia */
+  animation: fadeInOut 4s linear infinite;
 }
 
 .char-space {
-  width: 0.8em; /* Ajusta el ancho del espacio según sea necesario */
+  width: 0.8em;
   display: inline-block;
 }
 

@@ -1,12 +1,12 @@
 .container-preguntas button.correct {
-  background-color: lightblue; /* Celeste para la opción correcta */
+  background-color: lightblue;
   color: #000;
   border: 2px solid #000;
 }
 
 .container-preguntas button.incorrect {
-  background-color: red; /* Rojo para la opción incorrecta */
-  color: #fff; /* Texto blanco para mejor contraste */
+  background-color: red;
+  color: #fff;
 }
 
 .container-preguntas {
@@ -79,16 +79,16 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 .container-preguntas button.correct {
-  background-color: green; /* Celeste para la opción correcta */
+  background-color: green;
   color: #000;
   border: 2px solid #000;
 }
 
 .container-preguntas button.incorrect {
-  background-color: red; /* Rojo para la opción incorrecta */
-  color: #fff; /* Texto blanco para mejor contraste */
+  background-color: red;
+  color: #fff;
 }
 .imgresults {
-  width: 150px; /* Ancho mediano */
-  height: auto; /* Altura automática para mantener la proporción */
+  width: 150px;
+  height: auto;
 }

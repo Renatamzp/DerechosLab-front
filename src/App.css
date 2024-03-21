@@ -5,14 +5,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: var(--bg);
-
-  /* Otros estilos */
 }
 
-/* Agrega tus otros estilos según sea necesario */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-/* Resto de tus estilos */

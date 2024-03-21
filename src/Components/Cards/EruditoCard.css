@@ -27,9 +27,9 @@
 .EruditoBtn {
   font-family: "Boogaloo", cursive;
   font-size: 2em;
+  padding: 3%;
   border-radius: 10px;
-  background-color: #3498db; /* Azul brillante */
-  color: #fff;
+  background-color: #3498db;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
   border: none;

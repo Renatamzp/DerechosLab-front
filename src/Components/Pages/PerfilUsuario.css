@@ -36,45 +36,45 @@
   display: flex;
   text-decoration: none;
   padding: 10px;
-  border-radius: 8px; /* Bordes más redondeados */
-  font-family: "Arial", sans-serif; /* Cambio de tipografía */
+  border-radius: 8px;
+  font-family: "Arial", sans-serif;
   text-align: center;
-  transition: all 0.3s ease-in-out; /* Transición más suave */
-  color: #ffffff; /* Texto blanco para mayor contraste */
-  background-color: #3498db; /* Fondo azul más vibrante */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  background-color: #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .boton-avatar:hover {
-  background-color: #2980b9; /* Color más oscuro al pasar el ratón */
-  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .boton-regresar {
   display: block;
   text-decoration: none;
   color: #fff;
-  background-color: #007bff; /* Color más llamativo */
+  background-color: #007bff;
   padding: 16px 24px;
-  border-radius: 8px; /* Bordes más redondeados */
-  font-family: "Boogaloo", cursive; /* Cambio de tipografía */
+  border-radius: 8px;
+  font-family: "Boogaloo", cursive;
   text-align: center;
-  transition: all 0.3s ease-in-out; /* Transición más suave */
+  transition: all 0.3s ease-in-out;
   margin: 10px auto 0;
   font-size: 30px;
 }
 
 .boton-regresar:hover {
-  background-color: #297fb8; /* Color más oscuro al pasar el ratón */
-  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+  background-color: #297fb8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .avatar-image {
-  max-width: 100px; /* Limitar tamaño del avatar */
-  border-radius: 50%; /* Hacer el avatar redondo */
-  border: 2px solid #fff; /* Borde blanco para destacar el avatar */
+  max-width: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 .datos-usuario {
   display: flex;
@@ -84,18 +84,18 @@
 .datos-usuario p {
   margin-bottom: 10px;
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
+  align-items: center;
 }
 
 .datos-usuario span {
   margin-right: 5px;
   font-weight: bold;
-  width: 100px; /* Ancho fijo para los títulos */
+  width: 100px;
 }
 
 .valorapellido,
 .valoremail,
 .valorusuario {
   font-weight: normal;
-  width: 200px; /* Ancho fijo para los valores */
+  width: 200px;
 }
